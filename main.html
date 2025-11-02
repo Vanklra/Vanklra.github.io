@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Полина Новикова — Junior Developer</title>
+  <style>
+    /* ====== Базовые стили ====== */
+    :root {
+      --bg-color: #f5f3f0;
+      --text-color: #222;
+      --accent-color: #c2b59b;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 80px 20px 50px;
+      background: linear-gradient(to bottom right, #e7e3dd, #f5f3f0);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      font-weight: 400;
+      color: #555;
+      font-size: 1.2rem;
+    }
+
+    section {
+      width: 90%;
+      max-width: 900px;
+      margin-bottom: 50px;
+      background-color: var(--card-bg);
+      box-shadow: 0 4px 15px var(--shadow);
+      border-radius: 12px;
+      padding: 40px;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    section h3 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    /* ====== Навыки ====== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px var(--shadow);
+    }
+
+    /* ====== Проекты ====== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background-color: var(--bg-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h4 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    /* ====== Контакты ====== */
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 1rem;
+    }
+
+    .contacts a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* ====== Анимация ====== */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ====== Адаптив ====== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Полина Новикова</h1>
+    <h2>Junior Developer</h2>
+  </header>
+
+  <section id="about">
+    <h3>О себе</h3>
+    <p>
+      На данный момент работаю специалистом технической поддержки сложных программных продуктов
+      <strong>MasterSCADA4D</strong>, <strong>MasterOPC</strong> и <strong>MasterDigitalTwin</strong> (MPS Soft).
+    </p>
+    <p>
+      Обладаю опытом работы системным администратором и базовыми навыками разработки. Понимаю принципы работы оборудования,
+      сетевых протоколов и взаимодействия систем. Хочу развиваться в направлении программирования и создания промышленного ПО.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h3>Навыки</h3>
+    <div class="skills">
+      <span class="skill">MasterSCADA4D</span>
+      <span class="skill">MasterOPC</span>
+      <span class="skill">SQL</span>
+      <span class="skill">Wireshark</span>
+      <span class="skill">Hardware Basics</span>
+      <span class="skill">Troubleshooting</span>
+      <span class="skill">Industrial Protocols</span>
+      <span class="skill">Technical Support</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3>Проекты</h3>
+    <div class="projects">
+      <div class="project">
+        <h4>Симуляция обмена по Modbus</h4>
+        <p>Создала тестовую среду для проверки обмена данными между SCADA и устройствами по протоколу Modbus TCP. Настроила логирование и визуализацию данных.</p>
+      </div>
+      <div class="project">
+        <h4>Отладка взаимодействия SCADA с OPC-сервером</h4>
+        <p>Настроила связку MasterSCADA4D и MasterOPC, обеспечив корректную передачу тегов и обработку ошибок соединения.</p>
+      </div>
+      <div class="project">
+        <h4>Мини-проект на Python</h4>
+        <p>Написала небольшую утилиту для анализа логов SCADA-системы и фильтрации ошибок подключения.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h3>Контакты</h3>
+    <div class="contacts">
+      <p>📞 Телефон: <a href="tel:+789778473667">8 977 847 36 67</a></p>
+      <p>📧 Почта: <a href="mailto:novicova.p@mail.ru">novicova.p@mail.ru</a></p>
+      <p>💬 Telegram: <a href="https://t.me/Vankira" target="_blank">@Vankira</a></p>
+      <p>💻 GitHub: <a href="https://github.com/Vanklra" target="_blank">github.com/Vanklra</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Полина Новикова. Создано с любовью к SCADA и кофе ☕
+  </footer>
+
+</body>
+</html>
